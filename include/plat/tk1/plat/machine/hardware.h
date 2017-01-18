@@ -22,6 +22,9 @@
 #include <plat/machine/smmu.h>
 #include <mode/machine/hardware.h>
 #include <mode/api/constants.h>
+#ifdef CONFIG_ARM_ENABLE_PMU_OVERFLOW_INTERRUPT
+#include <arch/arm/arch/benchmark_overflowHandler.h>
+#endif
 
 #define TIMER_CLOCK_HZ		12000000llu
 

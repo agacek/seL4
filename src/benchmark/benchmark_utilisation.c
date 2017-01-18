@@ -45,6 +45,7 @@ void benchmark_track_utilisation_dump(void)
     buffer[BENCHMARK_TOTAL_UTILISATION] = benchmark_end_time - benchmark_start_time; /* Overall time */
 #endif /* CONFIG_ARM_ENABLE_PMU_OVERFLOW_INTERRUPT */
 
+    strlcpy((char *) &buffer[1], tcb->tcbName, 80);
 }
 
 void benchmark_track_reset_utilisation(void)
